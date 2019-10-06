@@ -14,19 +14,7 @@ export class PaginationCustomComponent implements OnInit {
   config: any;
 
   ngOnInit(): void {
-    this.lista = [
-      {id: 1, title: 'Testando 1', isCompleted: true},
-      {id: 2, title: 'Testando 2', isCompleted: true},
-      {id: 3, title: 'Testando 3', isCompleted: true},
-      {id: 4, title: 'Testando 4', isCompleted: true},
-      {id: 5, title: 'Testando 5', isCompleted: true},
-      {id: 6, title: 'Testando 6', isCompleted: true},
-      {id: 7, title: 'Testando 7', isCompleted: true},
-      {id: 8, title: 'Testando 8', isCompleted: true},
-      {id: 9, title: 'Testando 9', isCompleted: true},
-      {id: 10, title: 'Testando 10', isCompleted: true},
-      {id: 11, title: 'Testando 11', isCompleted: true}
-    ];
+    this.lista = Array(150).fill(0).map((x, i) => ({id: (i + 1), title:`Item ${i + 1}`}));
     
     this.config = {
       id: 'custom',
